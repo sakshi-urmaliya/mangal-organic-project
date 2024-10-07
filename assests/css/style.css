@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+/* header section start */
+header{
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    transition: all 0.6s;
+
+    
+}
+header .img-fluid{
+    width: 190px;
+    height: 70px;
+    float: left;
+    margin-left: 50px;
+    transition: all 0.5s;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+header nav ul li{
+    height: 60px;
+    line-height: 70px;
+    padding: 0px 10px;
+    transition: all 0.3s;
+    text-align: center;
+
+}
+header nav ul .menu:hover{
+    position: relative;
+
+}
+header nav ul li:last-child{
+    margin-right: 30px;
+ 
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+header nav ul li:hover{
+    border-bottom: 2px solid #8cc93e;
+}
+header nav ul li:hover .sub_menu{
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: -20px;
+
+}
+header nav ul li .sub_menu{
+    background-color: white;
+    display: none;
+    padding-left: 0px;
+    width: 200px;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 10px;
+    padding: 10px 0px;
+    
+}
+header nav ul li .sub_menu li{
+    display: block;
+    height: 35px;
+    line-height: 40px;
+    padding: 0px 20px;
+    transition: all 0.3s;
+    text-align: left;
+}
+header nav ul li .sub_menu li a{
+    color: black;
+}
+header nav ul li .sub_menu li:hover{
+    border-bottom: none;
+    background-color: #DDDDDD;
+}
+header nav ul li .sub_menu li:last-child{
+    margin-right: 0px;
+}
+header nav ul li .sub_menu div{
+    margin-top: -40px;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+    height: 40px;
+}
+header .toggler-btn{
+    color: white;
+    float: right;
+    line-height: 70px;
+    display: none;
+    margin-right: 40px;
+}
+.header-scroll{
+    box-shadow: 0px 2px 10px gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+
+}
+.header-scroll ul li a{
+    color: black;
+}
+.header-scroll .img-fluid{
+    width: 150px;
+}
+
+header .offcanvas-body{
+    padding: 0;
+}
+header .offcanvas-body li{
+    list-style: none;
+    height: auto;
+    line-height: 37px;
+    margin-right: 30px;
+    transition: all 0.4s;
+}
+header .offcanvas-body li a{
+    color: black;
+    text-decoration: none;
+}
+
+header  .offcanvas-body ul li:hover{
+    border-bottom: 2px solid #8cc93e;
+}
+header  .offcanvas-body ul li .sub_menu {
+    padding: 0;
+    margin-left: 20px;
+    width: 100%;
+}
+header  .offcanvas-body ul li .sub_menu li{
+    padding: 0px 20px;
+}
+header  .offcanvas-body ul li  a{
+    display: block;
+
+}
+
+header  .offcanvas-body ul li .sub_menu li:hover{
+    background-color: #DDDDDD;
+}
+
+/* header section end */
+/* banner section start */
+#banner .carousel-item img{
+    height: 100vh;
+}
+#banner .carousel-control-prev-icon,#banner .carousel-control-next-icon{
+    background-size: 70%;
+    transition: all 0.3s;
+}
+#banner .carousel-control-prev-icon:hover,#banner .carousel-control-next-icon:hover{
+    background-color: #16bf9a;
+    background-size: 40%;
+    padding: 30px;
+    border-radius: 50%;
+}
+#banner .carousel-indicators [data-bs-target]{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 1;
+    position: relative;
+    bottom: 100px;
+}
+#banner .carousel-indicators .active{
+    background-color: white;
+}
+#banner .carousel-caption .mouse-icon{
+    width: 20px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 0px auto;
+    
+}
+#banner .carousel-caption .mouse-icon .wheel{
+    width: 2px;
+    height: 7px;
+    border: 1px solid white;
+    margin: 0px auto;
+    position: relative;
+    top: 4px;
+    animation: drop 0.9s ease 0s infinite;
+}
+@keyframes drop {
+    0%{
+        top: 4px;
+    
+    }
+    100%{
+        top:25px;
+        opacity: 0;   
+    }
+    
+}
+/* banner section end */
+/* farmer section start */
+#farmer{
+    margin: 80px 0px;
+    background: url(../img/farmer-back.jpg)fixed;
+    background-position: center;
+}
+/* farmer section end */
+/* max-width:992px start*/
+@media (max-width:992px) {
+    header nav{
+        display: none;
+    }
+    header .toggler-btn{
+        display: block;
+    }
+    
+}
+/* max-width:992px end */
+
